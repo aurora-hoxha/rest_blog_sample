@@ -16,4 +16,3 @@ class CommentApi(generics.ListCreateAPIView):
 class BlogPostRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
-
