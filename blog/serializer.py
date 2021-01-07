@@ -25,4 +25,4 @@ class BlogPostSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'author', 'content', 'rate', 'created', 'author_name', 'comment_set']
 
     def get_author_name(self, obj):
-        return obj.author.usernam
+        return obj.author.username

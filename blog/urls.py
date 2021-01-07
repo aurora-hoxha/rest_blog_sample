@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from blog import views
-from blog.views import BlogPostApi, CommentApi
+from blog.views import BlogPostApi, CommentApi, BlogPostRetrieveUpdateDestroy
 
 from django.conf.urls import url, include
 from rest_framework import routers
 
 urlpatterns = [
-    path('blogapi', BlogPostApi.as_view()),
-    path('commentapi', CommentApi.as_view()),
+    path('blog/', BlogPostApi.as_view()),
+    path('comment/', CommentApi.as_view()),
+    path('blog/<int:pk>/', BlogPostRetrieveUpdateDestroy.as_view())
 
 ]
